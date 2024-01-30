@@ -5,6 +5,15 @@ plugins {
 
 kotlin {
     targetHierarchy.default()
+    wasmJs {
+        moduleName = "library"
+        browser {
+            commonWebpackConfig {
+                outputFileName = "library.js"
+            }
+        }
+        binaries.library()
+    }
     jvm()
     androidTarget {
         publishLibraryVariants("release")
@@ -14,6 +23,9 @@ kotlin {
             }
         }
     }
+
+    macosX64()
+    macosArm64()
     iosX64()
     iosArm64()
     iosSimulatorArm64()
