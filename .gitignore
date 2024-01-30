@@ -30,3 +30,5 @@ replay_pid*
 build
 # custom
 local.properties
+
+.DS_Store

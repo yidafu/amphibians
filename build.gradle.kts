@@ -7,12 +7,11 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform) apply false
 }
 
-subprojects {
+allprojects {
     repositories {
-        maven { setUrl("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/") }
-        maven { setUrl("https://s01.oss.sonatype.org/content/repositories/releases/") }
-
-        // Required to download KtLint
+        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+        maven { setUrl("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/") }        // Required to download KtLint
         mavenCentral()
+        maven { setUrl("https://s01.oss.sonatype.org/content/repositories/releases/") }
     }
 }

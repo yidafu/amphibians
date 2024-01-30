@@ -18,21 +18,6 @@ pluginManagement {
         mavenCentral()
     }
 }
-dependencyResolutionManagement {
-    repositories {
-        maven("https://mirrors.cloud.tencent.com/nexus/repository/maven-public/")
-
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
-        mavenCentral()
-        google()
-    }
-
-    versionCatalogs {
-        create("libs") {
-            from(files("./build-logic/libs.versions.toml"))
-        }
-    }
-}
 
 plugins {
     // Apply the foojay-resolver plugin to allow automatic download of JDKs
@@ -41,5 +26,4 @@ plugins {
 
 rootProject.name = "amphibians"
 include(":composeApp")
-include(":list")
-include(":utilities")
+include(":library")
