@@ -25,5 +25,6 @@ plugins {
 }
 
 rootProject.name = "amphibians"
-include(":composeApp")
+include(":AmphibiansApp")
 include(":library")
+include(":amphibians-webview")
